@@ -1,0 +1,334 @@
+.grammar-page {
+  display: grid;
+  gap: 16px;
+}
+
+.grammar-hero,
+.grammar-lesson {
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 3px 12px #17243b08;
+}
+
+.grammar-hero h2,
+.grammar-lesson-heading h2 {
+  margin: 5px 0 8px;
+  color: var(--ink);
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.grammar-hero > p,
+.grammar-lesson-heading > p:last-child {
+  margin: 0;
+  color: #788294;
+  line-height: 1.65;
+}
+
+.grammar-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grammar-summary > div {
+  display: grid;
+  min-width: 150px;
+  gap: 3px;
+  padding: 12px 15px;
+  border: 1px solid #eceef2;
+  border-radius: 11px;
+  background: #fafbfc;
+}
+
+.grammar-summary strong {
+  color: var(--primary);
+  font-size: 19px;
+}
+
+.grammar-summary span,
+.grammar-card-meta,
+.grammar-card-status,
+.grammar-level,
+.grammar-toolbar > span {
+  color: #7d8797;
+  font-size: 12px;
+}
+
+.grammar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#app .grammar-card {
+  display: flex;
+  min-width: 0;
+  min-height: 170px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: white;
+  box-shadow: 0 3px 12px #17243b08;
+  color: var(--ink);
+  text-align: left;
+}
+
+#app .grammar-card:hover {
+  transform: translateY(-2px);
+  border-color: #e2c6ca;
+  background: #fdfafa;
+}
+
+.grammar-card-top,
+.grammar-card-meta,
+.grammar-quiz-heading,
+.grammar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.grammar-level {
+  color: var(--primary);
+  font-weight: 750;
+}
+
+.grammar-card strong {
+  font-size: 16px;
+}
+
+.grammar-pattern {
+  color: #455674;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.grammar-card-meta {
+  margin-top: auto;
+}
+
+.grammar-card-meta b {
+  color: var(--primary);
+  font-size: 16px;
+}
+
+.grammar-toolbar {
+  flex-wrap: wrap;
+}
+
+.grammar-lesson {
+  display: grid;
+  gap: 20px;
+}
+
+.grammar-lesson-heading {
+  display: grid;
+  gap: 7px;
+}
+
+.grammar-lesson-heading h2,
+.grammar-lesson-heading > p {
+  margin-top: 0;
+}
+
+.grammar-examples {
+  display: grid;
+  gap: 10px;
+}
+
+.grammar-examples h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.grammar-example {
+  display: grid;
+  gap: 5px;
+  padding: 13px 15px;
+  border-left: 3px solid var(--primary);
+  border-radius: 0 10px 10px 0;
+  background: #f8f9fc;
+  line-height: 1.5;
+}
+
+.grammar-example strong {
+  color: #263d68;
+  font-size: 18px;
+}
+
+.grammar-example-pinyin {
+  color: #788294;
+  font-size: 13px;
+}
+
+.grammar-quiz {
+  display: grid;
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid #e8ebf2;
+  border-radius: 13px;
+  background: #fcfcfe;
+}
+
+.grammar-quiz-heading {
+  color: #788294;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.grammar-quiz-heading strong {
+  color: var(--primary);
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.grammar-progress {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: #eceef2;
+}
+
+.grammar-progress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+  transition: width 160ms ease;
+}
+
+.grammar-question {
+  margin: 4px 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.grammar-options {
+  display: grid;
+  gap: 8px;
+}
+
+#app .grammar-answer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #e1e6ef;
+  border-radius: 10px;
+  background: white;
+  color: #34445d;
+  text-align: left;
+}
+
+.grammar-answer-key {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  flex: 0 0 25px;
+  place-items: center;
+  border: 1px solid #e1e6ef;
+  border-radius: 7px;
+  background: #f7f8fb;
+  color: #64728a;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+#app .grammar-answer:hover:not(:disabled) {
+  border-color: #b8c5fa;
+  background: #f4f6ff;
+}
+
+#app .grammar-answer.is-correct,
+#app .grammar-answer.is-correct:disabled {
+  border-color: #a7d6b7;
+  background: #eff9f3;
+  color: #35674a;
+}
+
+#app .grammar-answer.is-wrong,
+#app .grammar-answer.is-wrong:disabled {
+  border-color: #e5b7bc;
+  background: #fff3f3;
+  color: #a1414b;
+}
+
+.grammar-feedback {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.grammar-feedback p {
+  margin: 0;
+}
+
+.grammar-audio-feedback {
+  font-size: 12px;
+}
+
+.grammar-feedback.is-correct {
+  color: #35674a;
+}
+
+.grammar-feedback.is-wrong {
+  color: #a1414b;
+}
+
+#app #grammarContinue,
+#app .grammar-result button {
+  justify-self: start;
+}
+
+.grammar-result {
+  display: grid;
+  justify-items: start;
+  gap: 9px;
+  padding: 18px;
+  border: 1px solid #cce8d7;
+  border-radius: 13px;
+  background: #f0faf4;
+}
+
+.grammar-result-icon {
+  color: #35674a;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.grammar-result h3,
+.grammar-result p {
+  margin: 0;
+}
+
+.grammar-result p {
+  color: #52705d;
+}
+
+@media (max-width: 620px) {
+  .grammar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grammar-summary > div {
+    flex: 1 1 130px;
+  }
+
+  .grammar-quiz {
+    padding: 13px;
+  }
+}
